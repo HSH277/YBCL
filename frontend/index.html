@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品列表 - 电商平台</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 导航栏 -->
+<nav class="navbar">
+  <a href="index.html" class="logo">电商平台</a>
+  <div class="nav-links">
+    <a href="index.html">首页</a>
+    <a href="cart.html" id="cartLink" style="display:none;">购物车</a>
+    <a href="orders.html" id="ordersLink" style="display:none;">我的订单</a>
+    <span class="user-info" id="userDisplay"></span>
+    <button class="btn-logout" id="btnLogout" style="display:none;" onclick="logout()">退出</button>
+    <a href="login.html" id="loginLink">登录</a>
+  </div>
+</nav>
+
+<!-- 主内容 -->
+<div class="container">
+  <!-- 搜索栏 -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="搜索商品名称...">
+    <select id="categoryFilter">
+      <option value="">全部分类</option>
+    </select>
+  </div>
+
+  <!-- 商品网格 -->
+  <div class="product-grid" id="productGrid">
+    <div style="text-align:center;padding:40px;color:#999;">加载中...</div>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/products.js"></script>
+</body>
+</html>
